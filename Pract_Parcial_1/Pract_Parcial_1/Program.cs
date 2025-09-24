@@ -13,9 +13,9 @@ while (opcion == "si" || opcion == "Si")
 {
     Console.WriteLine("Bienvenido al Programa de Calculo O Dias");
     opcion = "";
-    Console.WriteLine($"Elija una Opcion: \n1. Calculadora. \n2. Ver Dias.");
-    int op = int.Parse(Console.ReadLine()); 
-    if(op == 1)
+    Console.WriteLine($"Elija una Opcion: \n1. Calculadora. \n2. Ver Dias. \n3. Ciclos Repetitivos");
+    int op = int.Parse(Console.ReadLine());
+    if (op == 1)
     {
         Console.WriteLine("Elija una opcion: \n1. Suma \n2. Resta \n3. Multiplicación \n4. Comparar");
         var opcalculo = int.Parse(Console.ReadLine());
@@ -75,15 +75,16 @@ while (opcion == "si" || opcion == "Si")
                 }
 
                 //Comparacion si son diferentes
-                Console.WriteLine("\nComparacion si son diferentes"); 
-                if (dato2c != dato1c){
+                Console.WriteLine("\nComparacion si son diferentes");
+                if (dato2c != dato1c)
+                {
                     Console.WriteLine("Son diferentes");
                 }
                 else
                 {
                     Console.WriteLine("Son iguales");
                 }
-                    break;
+                break;
             default:
                 Console.WriteLine("Solo hay 7 dias de la semana");
                 break;
@@ -132,14 +133,42 @@ while (opcion == "si" || opcion == "Si")
                 Console.WriteLine("Solo hay 7 dias de la semana");
                 break;
         }
+    } 
+    else if (op == 3)
+    {
+        //Uso de ciclos for 
+        Console.WriteLine("Ingrese un numero para mostrar una lista: ");
+        int num = int.Parse(Console.ReadLine());
+        Console.WriteLine("Listas de numeros acendentes: "); 
+        for(int i = 0; i < num; i++)
+        {
+            Console.WriteLine(i);
+        }
+        Console.WriteLine("Lista de números descendentes: ");
+        for (int l = num - 1; l >= 0; l--)
+        {
+            Console.WriteLine(l);
+        }
+
+        Console.WriteLine("Lista de números de dos en dos ascendentes:");
+        for (int k = 0; k < num; k += 2)
+        {
+            Console.WriteLine(k);
+        }
+
+        Console.WriteLine("Lista de números de dos en dos descendentes:");
+        for (int m = num - 1; m >= 0; m -= 2)
+        {
+            Console.WriteLine(m);
+        }
     }
     else
     {
-        Console.WriteLine("Opcion no valida"); 
+        Console.WriteLine("Opcion no valida");
     }
 
-        Console.WriteLine("Desea Volver a usar: ");
-    opcion = Console.ReadLine(); 
+    Console.WriteLine("Desea Volver a usar: ");
+    opcion = Console.ReadLine();
 }
 
 
